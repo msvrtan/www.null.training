@@ -1,4 +1,7 @@
 {
+    "ciaranmcnulty/phpspec-typehintedmethods": {
+        "version": "3.0.0"
+    },
     "composer/semver": {
         "version": "1.4.2"
     },
@@ -89,6 +92,9 @@
     "jean85/pretty-package-versions": {
         "version": "1.0.3"
     },
+    "mehr-als-nix/parallel": {
+        "version": "v1.0.0"
+    },
     "mockery/mockery": {
         "version": "1.0"
     },
@@ -130,6 +136,9 @@
     },
     "pdepend/pdepend": {
         "version": "2.5.2"
+    },
+    "phing/phing": {
+        "version": "3.0.x-dev"
     },
     "php-cs-fixer/diff": {
         "version": "v1.2.0"
@@ -184,6 +193,9 @@
     },
     "sebastian/recursion-context": {
         "version": "3.0.0"
+    },
+    "sebastian/version": {
+        "version": "2.0.1"
     },
     "sensio/framework-extra-bundle": {
         "version": "4.0",
