@@ -33,6 +33,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "spec\\": "spec/",
             "App\\Tests\\": "tests/"
         }
     },
