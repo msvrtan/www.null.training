@@ -9,6 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 class HomepageController
 {
 
+    /**
+     * @Route("/")
+     */
     public function indexAction()
     {
         return new JsonResponse(['id'=>1,'name'=>'John']);
