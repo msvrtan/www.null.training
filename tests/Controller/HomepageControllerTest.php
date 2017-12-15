@@ -16,6 +16,6 @@ class HomepageControllerTest extends WebTestCase
 
         $client->request('GET', $url);
 
-        self::assertEquals('{"id":1,"name":"John"}', $client->getResponse()->getContent());
+        self::assertEquals('This is homepage.', $client->getResponse()->getContent());
     }
 }
