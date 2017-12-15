@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -11,10 +12,11 @@ class HomepageController
 
     /**
      * @Route("/")
+     * @Template()
      */
     public function indexAction()
     {
-        return new JsonResponse(['id'=>1,'name'=>'John']);
+        return [];
     }
 
     /**
