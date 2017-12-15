@@ -1,13 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Bundle\FrameworkBundle\Tests\TestCase;
 
 class HomepageControllerTest extends WebTestCase
 {
-
     public function testHomepage()
     {
         $url = '/';
