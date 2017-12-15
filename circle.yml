@@ -1,0 +1,32 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.1.12-cli
+    working_directory: ~/repo
+    parallel: 1
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+
+      - run:
+          name: Composer install
+          command: composer install -n --prefer-dist
+
+      - run:
+          name: PHPUnit
+          command: ./vendor/bin/phpunit
+
+      - save_cache:
+          key: cache-v1-{{ checksum "composer.lock" }}
+          paths:
+            - ./vendor
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
