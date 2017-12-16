@@ -23,6 +23,13 @@
         <env name="DATABASE_URL" value="mysql://bob:n0p455@127.0.0.1:3306/bob_test"/>
         <env name="TEST_DATABASE_URL" value="mysql://bob:n0p455@127.0.0.1:3306/bob_test"/>
         <!-- ###- doctrine/doctrine-bundle ### -->
+
+        <!-- ###+ symfony/swiftmailer-bundle ### -->
+        <!-- For Gmail as a transport, use: "gmail://username:password@localhost" -->
+        <!-- For a generic SMTP server, use: "smtp://localhost:25?encryption=&auth_mode=" -->
+        <!-- Delivery is disabled by default via "null://localhost" -->
+        <env name="MAILER_URL" value="null://localhost"/>
+        <!-- ###- symfony/swiftmailer-bundle ### -->
     </php>
 
     <testsuites>
