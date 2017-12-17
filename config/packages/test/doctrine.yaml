@@ -1,3 +1,3 @@
 doctrine:
     dbal:
-        dbname:   'bob_test'
+        dbname:   'nulltraining_test'
