@@ -16,6 +16,6 @@ class HomepageControllerTest extends WebTestCase
 
         $client->request('GET', $url);
 
-        self::assertEquals('This is homepage.', $client->getResponse()->getContent());
+        self::assertContains('Training & mentoring PHP developers', $client->getResponse()->getContent());
     }
 }
