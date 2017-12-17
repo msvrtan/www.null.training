@@ -41,8 +41,24 @@ jobs:
           command: bin/console doctrine:fixtures:load --no-interaction --env=test
 
       - run:
+          name: PHPSpec
+          command: ./vendor/bin/phpspec run
+
+      - run:
           name: PHPUnit
           command: ./vendor/bin/phpunit
+
+      - run:
+          name: Behat
+          command: ./vendor/bin/behat
+
+      - run:
+          name: PHPStan
+          command: ./vendor/bin/phing phpstan
+
+      - run:
+          name: Code standards
+          command: ./vendor/bin/phing check-codestandards
 
       - save_cache:
           key: cache-v1-{{ checksum "composer.lock" }}
