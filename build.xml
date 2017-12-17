@@ -23,7 +23,7 @@
     </target>
 
     <target name="phpunit" description="Run phpunit">
-        <exec command="./vendor/bin/simple-phpunit" passthru="true" checkreturn="true"/>
+        <exec command="./vendor/bin/phpunit" passthru="true" checkreturn="true"/>
     </target>
 
     <target name="behat" description="Run behat">
