@@ -30,3 +30,6 @@ services:
         resource: '../src/DataFixtures/ORM'
         tags: ['doctrine.fixture.orm']
 
+    Symfony\Component\Routing\Router: '@router'
+
+
