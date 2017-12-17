@@ -29,6 +29,10 @@ jobs:
           command: composer install -n --prefer-dist
 
       - run:
+          name: Wait for MySQL to show up
+          command: dockerize -wait tcp://localhost:3306 -timeout 1m
+
+      - run:
           name: Run migrations
           command: bin/console doctrine:migrations:migrate --no-interaction --env=test
 
