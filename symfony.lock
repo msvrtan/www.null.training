@@ -116,6 +116,9 @@
             "ref": "9d60c231a92e69c68b89897813ec4931d0697b1f"
         }
     },
+    "friendsofsymfony/user-bundle": {
+        "version": "2.1.x-dev"
+    },
     "gecko-packages/gecko-php-unit": {
         "version": "v3.0"
     },
@@ -365,6 +368,9 @@
     "symfony/flex": {
         "version": "v1.0.46"
     },
+    "symfony/form": {
+        "version": "v4.0.2"
+    },
     "symfony/framework-bundle": {
         "version": "3.3",
         "recipe": {
@@ -381,6 +387,9 @@
         "version": "v4.0.1"
     },
     "symfony/inflector": {
+        "version": "v4.0.2"
+    },
+    "symfony/intl": {
         "version": "v4.0.2"
     },
     "symfony/lts": {
@@ -421,6 +430,9 @@
             "version": "3.3",
             "ref": "1fc8201c507489d500c0538f8b40f6851463aa0d"
         }
+    },
+    "symfony/polyfill-intl-icu": {
+        "version": "v1.6.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.6.0"
@@ -496,6 +508,9 @@
             "version": "3.3",
             "ref": "f75ac166398e107796ca94cc57fa1edaa06ec47f"
         }
+    },
+    "symfony/validator": {
+        "version": "v4.0.2"
     },
     "symfony/var-dumper": {
         "version": "v4.0.2"
