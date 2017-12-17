@@ -1,0 +1,35 @@
+company:
+    brandName: Null Training
+    tagline: Training & mentoring PHP developers
+
+
+homepage:
+    link: Home
+    findOutMore: Find Out More
+    about:
+        link: About
+        question: Want to boost your PHP skills?
+        offer: We are offering limited number of workshops & company trainings
+        offerCallToAction: What We Offer
+    services:
+        link: Services
+        title: Services
+        subtitle: What We Offer
+        workshops:
+          title: Workshops
+          intro: One and two day workshops
+        teamTraining:
+          title: Team trainings
+          intro: Lets level up your whole team
+        academy:
+          title: Academy
+          intro: Lorem ipsum
+    portfolio:
+        link: Portfolio
+        title: Portfolio
+    callout:
+        link: Improve your team!
+        title: Improve your team!
+        subtitle: Contact us now!
+    contact:
+        link: Contact

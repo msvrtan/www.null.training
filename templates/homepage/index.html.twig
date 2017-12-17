@@ -5,11 +5,11 @@
     <!-- Header -->
     <header class="masthead d-flex">
         <div class="container text-center my-auto">
-            <h1 class="mb-1">Null Training</h1>
+            <h1 class="mb-1">{% trans %}company.brandName{% endtrans %}</h1>
             <h3 class="mb-5">
-                <em>Training & mentoring PHP developers</em>
+                <em>{% trans %}company.tagline{% endtrans %}</em>
             </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">{% trans %}homepage.findOutMore{% endtrans %}</a>
         </div>
         <div class="overlay"></div>
     </header>
@@ -19,9 +19,9 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    <h2>Want to boost your PHP skills?</h2>
-                    <p class="lead mb-5">We are offering limited number of workshops & company trainings</p>
-                    <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+                    <h2>{% trans %}homepage.about.question{% endtrans %}</h2>
+                    <p class="lead mb-5">{% trans %}homepage.about.offer{% endtrans %}</p>
+                    <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">{% trans %}homepage.about.offerCallToAction{% endtrans %}</a>
                 </div>
             </div>
         </div>
@@ -31,8 +31,8 @@
     <section class="content-section bg-primary text-white text-center" id="services">
         <div class="container">
             <div class="content-section-heading">
-                <h3 class="text-secondary mb-0">Services</h3>
-                <h2 class="mb-5">What We Offer</h2>
+                <h3 class="text-secondary mb-0">{% trans %}homepage.services.title{% endtrans %}</h3>
+                <h2 class="mb-5">{% trans %}homepage.services.subtitle{% endtrans %}</h2>
             </div>
             <div class="row">
 
@@ -41,27 +41,27 @@
                         <i class="icon-pencil"></i>
                     </span>
                     <h4>
-                        <strong>Workshops</strong>
+                        <strong>{% trans %}homepage.services.workshops.title{% endtrans %}</strong>
                     </h4>
-                    <p class="text-faded mb-0">One and two day workshops</p>
+                    <p class="text-faded mb-0">{% trans %}homepage.services.workshops.intro {% endtrans %}</p>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
                     <span class="service-icon rounded-circle mx-auto mb-3">
                         <i class="icon-people"></i>
                     </span>
                     <h4>
-                        <strong>Team trainings</strong>
+                        <strong>{% trans %}homepage.services.teamTraining.title{% endtrans %}</strong>
                     </h4>
-                    <p class="text-faded mb-0">Lets level up your whole team <i class="fa fa-heart"></i></p>
+                    <p class="text-faded mb-0">{% trans %}homepage.services.teamTraining.intro {% endtrans %} <i class="fa fa-heart"></i></p>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
                     <span class="service-icon rounded-circle mx-auto mb-3">
                         <i class="icon-graduation"></i>
                     </span>
                     <h4>
-                        <strong>Academy</strong>
+                        <strong>{% trans %}homepage.services.academy.title{% endtrans %}</strong>
                     </h4>
-                    <p class="text-faded mb-0">Lorem ipsum</i></p>
+                    <p class="text-faded mb-0">{% trans %}homepage.services.academy.intro {% endtrans %}</i></p>
                 </div>
             </div>
         </div>
@@ -71,8 +71,8 @@
     <section class="content-section" id="portfolio">
         <div class="container">
             <div class="content-section-heading text-center">
-                <h3 class="text-secondary mb-0">Portfolio</h3>
-                <h2 class="mb-5">Workshops</h2>
+                <h3 class="text-secondary mb-0">{% trans %}homepage.portfolio.title{% endtrans %}</h3>
+                <h2 class="mb-5">{% trans %}homepage.services.workshops.title{% endtrans %}</h2>
             </div>
             <div class="row no-gutters">
                 <div class="col-lg-6">
@@ -138,8 +138,8 @@
     <!-- Callout -->
     <section class="callout">
         <div class="container text-center">
-            <h2 class="mx-auto mb-5">Improve your team!</h2>
-            <a class="btn btn-primary btn-xl" href="#url-missing">Contact us now!</a>
+            <h2 class="mx-auto mb-5">{% trans %}homepage.callout.title{% endtrans %}</h2>
+            <a class="btn btn-primary btn-xl" href="#url-missing">{% trans %}homepage.callout.subtitle{% endtrans %}</a>
         </div>
     </section>
 
