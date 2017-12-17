@@ -29,6 +29,14 @@ jobs:
           command: composer install -n --prefer-dist
 
       - run:
+          name: Run migrations
+          command: bin/console doctrine:migrations:migrate --no-interaction --env=test
+
+      - run:
+          name: Run fixtures
+          command: bin/console doctrine:fixtures:load --no-interaction --env=test
+
+      - run:
           name: PHPUnit
           command: ./vendor/bin/phpunit
 
