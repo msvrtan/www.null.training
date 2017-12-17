@@ -1,1 +1,156 @@
-This is homepage.
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <!-- Header -->
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+            <h1 class="mb-1">Null Training</h1>
+            <h3 class="mb-5">
+                <em>Training & mentoring PHP developers</em>
+            </h3>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2>Want to boost your PHP skills?</h2>
+                    <p class="lead mb-5">We are offering limited number of workshops & company trainings</p>
+                    <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+        <div class="container">
+            <div class="content-section-heading">
+                <h3 class="text-secondary mb-0">Services</h3>
+                <h2 class="mb-5">What We Offer</h2>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <span class="service-icon rounded-circle mx-auto mb-3">
+                        <i class="icon-pencil"></i>
+                    </span>
+                    <h4>
+                        <strong>Workshops</strong>
+                    </h4>
+                    <p class="text-faded mb-0">One and two day workshops</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+                    <span class="service-icon rounded-circle mx-auto mb-3">
+                        <i class="icon-people"></i>
+                    </span>
+                    <h4>
+                        <strong>Team trainings</strong>
+                    </h4>
+                    <p class="text-faded mb-0">Lets level up your whole team <i class="fa fa-heart"></i></p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+                    <span class="service-icon rounded-circle mx-auto mb-3">
+                        <i class="icon-graduation"></i>
+                    </span>
+                    <h4>
+                        <strong>Academy</strong>
+                    </h4>
+                    <p class="text-faded mb-0">Lorem ipsum</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+        <div class="container">
+            <div class="content-section-heading text-center">
+                <h3 class="text-secondary mb-0">Portfolio</h3>
+                <h2 class="mb-5">Workshops</h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#url-missing">
+                        <span class="caption">
+                            <span class="caption-content">
+                                <h2>Introduction to unit testing</h2>
+                                <p class="mb-0">Increase code quality and productivity by writing unit tests for your code.</p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#url-missing">
+                        <span class="caption">
+                            <span class="caption-content">
+                                <h2>Introduction to Symfony framework</h2>
+                                <p class="mb-0">Looking to switch to Symfony framework?</p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#url-missing">
+                        <span class="caption">
+                            <span class="caption-content">
+                                <h2>Symfony 4: what's new? </h2>
+                                <p class="mb-0">One day training, covering all the changes and new features that came in version 4.</p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#url-missing">
+                        <span class="caption">
+                            <span class="caption-content">
+                                <h2>Code reviews</h2>
+                                <p class="mb-0">No one should be the <b>only</b> person understanding specific parts of your projects.</p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <a class="portfolio-item" href="#url-missing">
+                        <span class="caption">
+                            <span class="caption-content">
+                                <h2>Acceptance testing</h2>
+                                <p class="mb-0">By writing acceptance tests we can verify that our changes are inlined with user stories.</p>
+                            </span>
+                        </span>
+                        <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Callout -->
+    <section class="callout">
+        <div class="container text-center">
+            <h2 class="mx-auto mb-5">Improve your team!</h2>
+            <a class="btn btn-primary btn-xl" href="#url-missing">Contact us now!</a>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Croatia&amp;output=embed"></iframe>
+        <br/>
+        <small>
+            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Croatia"></a>
+        </small>
+    </section>
+
+
+{% endblock %}
