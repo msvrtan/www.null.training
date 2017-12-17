@@ -1,0 +1,35 @@
+company:
+    brandName: Null Training
+    tagline: Treniranje & mentoriranje PHP developera
+
+
+homepage:
+    link: Naslovnica
+    findOutMore: Više o nama
+    about:
+        link: O nama
+        question: Želite unaprijediti znanje PHPa?
+        offer: Nudimo (za sada) ograničeni broj javnih radionica odnosno treninga u Vašoj kompaniji
+        offerCallToAction: Ponuda
+    services:
+        link: Usluge
+        title: Usluge
+        subtitle: Što nudimo
+        workshops:
+          title: Radionice
+          intro: Jednodnevne i dvodnevne radionice
+        teamTraining:
+          title: Timska edukacija
+          intro: Unaprijedite cijeli tim
+        academy:
+          title: Akademija
+          intro: Lorem ipsum
+    portfolio:
+        link: Portfolio
+        title: Portfolio
+    callout:
+        link: Unaprijedite tim!
+        title: Unaprijedite tim!
+        subtitle: Kontaktirajte nas već danas!
+    contact:
+        link: Kontakt
