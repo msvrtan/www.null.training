@@ -7,6 +7,7 @@
     <description>Created with the PHP Coding Standard Generator.
         http://edorian.github.com/php-coding-standard-generator/
     </description>
+    <exclude-pattern>Migrations/Version*.php</exclude-pattern>
     <rule ref="rulesets/codesize.xml/CyclomaticComplexity"/>
     <rule ref="rulesets/codesize.xml/NPathComplexity"/>
     <rule ref="rulesets/codesize.xml/ExcessiveMethodLength"/>
