@@ -11,6 +11,7 @@
 /.idea
 /composer.phar
 .DS_Store
+*.orig
 
 ###> symfony/phpunit-bridge ###
 .phpunit
