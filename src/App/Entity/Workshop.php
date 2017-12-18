@@ -6,8 +6,11 @@ namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Nette\Utils\Strings;
 
 /**
+ * @see WorkshopFixtures
+ *
  * @ORM\Entity(repositoryClass="App\Repository\WorkshopRepository")
  */
 class Workshop
@@ -26,21 +29,56 @@ class Workshop
      *
      * @var string
      */
-    private $title;
+    private $enTitle;
 
     /**
      * @ORM\Column(type="text")
      *
      * @var string
      */
-    private $shortIntroduction;
+    private $enShortIntroduction;
 
     /**
      * @ORM\Column(type="text")
      *
      * @var string
      */
-    private $description;
+    private $enDescription;
+
+    /**
+     * @ORM\Column(type="string",length=200)
+     *
+     * @var string
+     */
+    private $enSlug;
+
+    /**
+     * @ORM\Column(type="string",length=200)
+     *
+     * @var string
+     */
+    private $hrTitle;
+
+    /**
+     * @ORM\Column(type="text")
+     *
+     * @var string
+     */
+    private $hrShortIntroduction;
+
+    /**
+     * @ORM\Column(type="text")
+     *
+     * @var string
+     */
+    private $hrDescription;
+
+    /**
+     * @ORM\Column(type="string",length=200)
+     *
+     * @var string
+     */
+    private $hrSlug;
 
     /**
      * @ORM\Column(type="datetime")
@@ -59,34 +97,66 @@ class Workshop
         return $this->id;
     }
 
-    public function getTitle(): string
+    public function getEnTitle(): string
     {
-        return $this->title;
+        return $this->enTitle;
     }
 
-    public function setTitle(string $title)
+    public function setEnTitle(string $enTitle)
     {
-        $this->title = $title;
+        $this->enTitle = $enTitle;
+        $this->enSlug  = Strings::webalize($enTitle);
     }
 
-    public function getShortIntroduction(): string
+    public function getEnShortIntroduction(): string
     {
-        return $this->shortIntroduction;
+        return $this->enShortIntroduction;
     }
 
-    public function setShortIntroduction(string $shortIntroduction)
+    public function setEnShortIntroduction(string $enShortIntroduction)
     {
-        $this->shortIntroduction = $shortIntroduction;
+        $this->enShortIntroduction = $enShortIntroduction;
     }
 
-    public function getDescription(): string
+    public function getEnDescription(): string
     {
-        return $this->description;
+        return $this->enDescription;
     }
 
-    public function setDescription(string $description)
+    public function setEnDescription(string $enDescription)
     {
-        $this->description = $description;
+        $this->enDescription = $enDescription;
+    }
+
+    public function getHrTitle(): string
+    {
+        return $this->hrTitle;
+    }
+
+    public function setHrTitle(string $hrTitle)
+    {
+        $this->hrTitle = $hrTitle;
+        $this->hrSlug  = Strings::webalize($hrTitle);
+    }
+
+    public function getHrShortIntroduction(): string
+    {
+        return $this->hrShortIntroduction;
+    }
+
+    public function setHrShortIntroduction(string $hrShortIntroduction)
+    {
+        $this->hrShortIntroduction = $hrShortIntroduction;
+    }
+
+    public function getHrDescription(): string
+    {
+        return $this->hrDescription;
+    }
+
+    public function setHrDescription(string $hrDescription)
+    {
+        $this->hrDescription = $hrDescription;
     }
 
     public function getCreatedAt(): DateTime

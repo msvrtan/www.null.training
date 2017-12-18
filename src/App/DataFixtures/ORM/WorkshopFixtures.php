@@ -17,9 +17,12 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
     public function load(ObjectManager $manager)
     {
         $cooking101 = new Workshop();
-        $cooking101->setTitle('Cooking 101');
-        $cooking101->setShortIntroduction('This is a 2 day workshop covering basics of cooking');
-        $cooking101->setDescription('In this course we will cover: - cooking eggs ...');
+        $cooking101->setEnTitle('Cooking 101');
+        $cooking101->setEnShortIntroduction('This is a 2 day workshop covering basics of cooking');
+        $cooking101->setEnDescription('In this workshop we will cover: - cooking eggs ...');
+        $cooking101->setHrTitle('Uvod u kuhanje');
+        $cooking101->setHrShortIntroduction('Osnove kuhanja u obliku dvodnevne radionice');
+        $cooking101->setHrDescription('U ovoj radionici ćemo proći: - kuhanje jaja ...');
 
         $manager->persist($cooking101);
 
