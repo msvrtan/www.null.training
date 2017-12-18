@@ -97,6 +97,48 @@ class Workshop
         return $this->id;
     }
 
+    public function getTitle(string $lang): string
+    {
+        switch ($lang) {
+            case 'hr':
+                return $this->hrTitle;
+            case 'en':
+                return $this->enTitle;
+        }
+    }
+
+    public function getShortIntroduction(string $lang): string
+    {
+        switch ($lang) {
+            case 'hr':
+                return $this->hrShortIntroduction;
+            case 'en':
+                return $this->enShortIntroduction;
+        }
+    }
+
+    public function getDescription(string $lang): string
+    {
+        switch ($lang) {
+            case 'hr':
+                return $this->hrDescription;
+            case 'en':
+                return $this->enDescription;
+        }
+    }
+
+    public function getSlug(string $lang): string
+    {
+        switch ($lang) {
+            case 'hr':
+                return $this->hrSlug;
+            case 'en':
+                return $this->enSlug;
+        }
+
+        return 'aaa';
+    }
+
     public function getEnTitle(): string
     {
         return $this->enTitle;
