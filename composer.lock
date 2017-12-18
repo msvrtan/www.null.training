@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8af319a80275eb341d8a9b3dac9dc446",
+    "content-hash": "66b166971762fec77a0d21a25eef45b7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -977,16 +977,16 @@
         },
         {
             "name": "friendsofsymfony/user-bundle",
-            "version": "dev-patch-1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/weaverryan/FOSUserBundle.git",
-                "reference": "3c1de669c48d0d1c9b8b44492debf7fbed8766c5"
+                "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
+                "reference": "35cc0f8f6169cfb9e1e2b280f4d54f54cea3b78f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/weaverryan/FOSUserBundle/zipball/3c1de669c48d0d1c9b8b44492debf7fbed8766c5",
-                "reference": "3c1de669c48d0d1c9b8b44492debf7fbed8766c5",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/35cc0f8f6169cfb9e1e2b280f4d54f54cea3b78f",
+                "reference": "35cc0f8f6169cfb9e1e2b280f4d54f54cea3b78f",
                 "shasum": ""
             },
             "require": {
@@ -1027,6 +1027,7 @@
                     "/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1036,12 +1037,11 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Thibault Duplessis",
-                    "email": "thibault.duplessis@gmail.com"
-                },
-                {
                     "name": "FriendsOfSymfony Community",
                     "homepage": "https://github.com/friendsofsymfony/FOSUserBundle/contributors"
+                },
+                {
+                    "name": "Thibault Duplessis"
                 }
             ],
             "description": "Symfony FOSUserBundle",
@@ -1049,11 +1049,7 @@
             "keywords": [
                 "User management"
             ],
-            "support": {
-                "docs": "https://symfony.com/doc/master/bundles/FOSUserBundle/index.html",
-                "source": "https://github.com/weaverryan/FOSUserBundle/tree/patch-1"
-            },
-            "time": "2017-12-15T11:04:55+00:00"
+            "time": "2017-12-18T17:30:39+00:00"
         },
         {
             "name": "javiereguiluz/easyadmin-bundle",
@@ -6020,17 +6016,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phingofficial/phing.git",
-                "reference": "b1c4bbe19dc806efd39986dd64b7770d56841608"
+                "reference": "fc460d8abb54eb600ae85bc848a06661a31c506f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/b1c4bbe19dc806efd39986dd64b7770d56841608",
-                "reference": "b1c4bbe19dc806efd39986dd64b7770d56841608",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/fc460d8abb54eb600ae85bc848a06661a31c506f",
+                "reference": "fc460d8abb54eb600ae85bc848a06661a31c506f",
                 "shasum": ""
             },
             "require": {
                 "mehr-als-nix/parallel": "^v1.0",
-                "php": ">=5.6",
+                "php": ">=7.1",
                 "sebastian/version": "^2.0",
                 "symfony/console": "^2.8 || ^3.0 || ^4.0",
                 "symfony/yaml": "^2.8 || ^3.1 || ^4.0"
@@ -6110,7 +6106,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2017-12-11T08:44:49+00:00"
+            "time": "2017-12-18T15:05:24+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
@@ -7613,16 +7609,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ba816f2e1bacc16278792c78b67c730dfff064a6"
+                "reference": "4064632daf602552d40dcff30a1658ab76fc1621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ba816f2e1bacc16278792c78b67c730dfff064a6",
-                "reference": "ba816f2e1bacc16278792c78b67c730dfff064a6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4064632daf602552d40dcff30a1658ab76fc1621",
+                "reference": "4064632daf602552d40dcff30a1658ab76fc1621",
                 "shasum": ""
             },
             "require": {
@@ -7660,7 +7656,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-12-12T21:36:10+00:00"
+            "time": "2017-12-18T00:24:01+00:00"
         },
         {
             "name": "symfony/class-loader",
