@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Repository\WorkshopRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -13,12 +14,15 @@ use Symfony\Component\Routing\Router;
 
 class HomepageController
 {
+    /** @var WorkshopRepository */
+    private $workshopRepository;
     /** @var Router */
     private $router;
 
-    public function __construct(Router $router)
+    public function __construct(WorkshopRepository $workshopRepository, Router $router)
     {
-        $this->router = $router;
+        $this->workshopRepository = $workshopRepository;
+        $this->router             = $router;
     }
 
     /**
@@ -37,9 +41,9 @@ class HomepageController
      * @Route("/{_locale}/",name="homepage",requirements={"_locale":"en|hr"})
      * @Template()
      */
-    public function homepageAction()
+    public function homepageAction(Request $request)
     {
-        return [];
+        return ['lang' => $request->getLocale(), 'workshops' => $this->workshopRepository->findAll()];
     }
 
     /**

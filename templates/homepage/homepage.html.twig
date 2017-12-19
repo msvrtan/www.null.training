@@ -75,61 +75,21 @@
                 <h2 class="mb-5">{% trans %}homepage.services.workshops.title{% endtrans %}</h2>
             </div>
             <div class="row no-gutters">
-                <div class="col-lg-6">
-                    <a class="portfolio-item" href="#url-missing">
-                        <span class="caption">
-                            <span class="caption-content">
-                                <h2>Introduction to unit testing</h2>
-                                <p class="mb-0">Increase code quality and productivity by writing unit tests for your code.</p>
+
+                {% for key, workshop in workshops %}
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="{{ path('workshop_details_' ~ lang, {'id': workshop.id, 'lang': lang, 'slug': workshop.slug(lang)}) }}">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>{{ workshop.title(lang) }}</h2>
+                                    <p class="mb-0">{{ workshop.shortIntroduction(lang)|raw }}</p>
+                                </span>
                             </span>
-                        </span>
-                        <img class="img-fluid" src="/img/portfolio-1.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a class="portfolio-item" href="#url-missing">
-                        <span class="caption">
-                            <span class="caption-content">
-                                <h2>Introduction to Symfony framework</h2>
-                                <p class="mb-0">Looking to switch to Symfony framework?</p>
-                            </span>
-                        </span>
-                        <img class="img-fluid" src="/img/portfolio-2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a class="portfolio-item" href="#url-missing">
-                        <span class="caption">
-                            <span class="caption-content">
-                                <h2>Symfony 4: what's new? </h2>
-                                <p class="mb-0">One day training, covering all the changes and new features that came in version 4.</p>
-                            </span>
-                        </span>
-                        <img class="img-fluid" src="/img/portfolio-3.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a class="portfolio-item" href="#url-missing">
-                        <span class="caption">
-                            <span class="caption-content">
-                                <h2>Code reviews</h2>
-                                <p class="mb-0">No one should be the <b>only</b> person understanding specific parts of your projects.</p>
-                            </span>
-                        </span>
-                        <img class="img-fluid" src="/img/portfolio-4.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-lg-6">
-                    <a class="portfolio-item" href="#url-missing">
-                        <span class="caption">
-                            <span class="caption-content">
-                                <h2>Acceptance testing</h2>
-                                <p class="mb-0">By writing acceptance tests we can verify that our changes are inlined with user stories.</p>
-                            </span>
-                        </span>
-                        <img class="img-fluid" src="/img/portfolio-2.jpg" alt="">
-                    </a>
-                </div>
+                            <img class="img-fluid" src="/img/portfolio-{{ (key)%4+1 }}.jpg" alt="">
+                        </a>
+                    </div>
+                {% endfor %}
+
             </div>
         </div>
     </section>
