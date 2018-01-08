@@ -99,7 +99,7 @@ class Workshop
         $this->createdAt = new DateTime();
     }
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -146,7 +146,7 @@ class Workshop
         return 'aaa';
     }
 
-    public function getEnTitle(): string
+    public function getEnTitle(): ?string
     {
         return $this->enTitle;
     }
@@ -157,7 +157,7 @@ class Workshop
         $this->enSlug  = Strings::webalize($enTitle);
     }
 
-    public function getEnShortIntroduction(): string
+    public function getEnShortIntroduction(): ?string
     {
         return $this->enShortIntroduction;
     }
@@ -167,7 +167,7 @@ class Workshop
         $this->enShortIntroduction = $enShortIntroduction;
     }
 
-    public function getEnDescription(): string
+    public function getEnDescription(): ?string
     {
         return $this->enDescription;
     }
@@ -177,7 +177,7 @@ class Workshop
         $this->enDescription = $enDescription;
     }
 
-    public function getHrTitle(): string
+    public function getHrTitle(): ?string
     {
         return $this->hrTitle;
     }
@@ -188,7 +188,7 @@ class Workshop
         $this->hrSlug  = Strings::webalize($hrTitle);
     }
 
-    public function getHrShortIntroduction(): string
+    public function getHrShortIntroduction(): ?string
     {
         return $this->hrShortIntroduction;
     }
@@ -198,7 +198,7 @@ class Workshop
         $this->hrShortIntroduction = $hrShortIntroduction;
     }
 
-    public function getHrDescription(): string
+    public function getHrDescription(): ?string
     {
         return $this->hrDescription;
     }

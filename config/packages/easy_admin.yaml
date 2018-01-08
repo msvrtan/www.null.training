@@ -1,5 +1,19 @@
 easy_admin:
-    site_name: Null Training
-    entities:
-        - App\Entity\Workshop
-        - App\Entity\User
+  site_name: Null Training
+  entities:
+    Workshop:
+      class: App\Entity\Workshop
+      list:
+        fields: ['id', 'enTitle', 'hrTitle', 'active', 'createdAt']
+      form:  # <-- 'form' is applied to both 'new' and 'edit' views
+        fields:
+          - { property: 'enTitle', label: 'Title (ENG)' }
+          - { property: 'hrTitle', label: 'Title (HR)' }
+          - { property: 'enShortIntroduction', label: 'Short intro (ENG)' }
+          - { property: 'hrShortIntroduction', label: 'Short intro (HR)' }
+          - { property: 'enDescription', label: 'Description (ENG)' }
+          - { property: 'hrDescription', label: 'Description (HR)' }
+          - { property: 'active', label: 'Active' }
+    User:
+      class: App\Entity\User
+      label: Users
