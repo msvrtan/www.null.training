@@ -43,7 +43,10 @@ class HomepageController
      */
     public function homepageAction(Request $request)
     {
-        return ['lang' => $request->getLocale(), 'workshops' => $this->workshopRepository->findAll()];
+        return [
+            'lang'      => $request->getLocale(),
+            'workshops' => $this->workshopRepository->findAllWorkshopsForHomepage(),
+        ];
     }
 
     /**

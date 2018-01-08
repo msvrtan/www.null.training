@@ -15,16 +15,20 @@ class WorkshopRepository extends ServiceEntityRepository
         parent::__construct($registry, Workshop::class);
     }
 
-    /*
-    public function findBySomething($value)
+    /**
+     * On homepage we first 10 active workshops.
+     *
+     * @return Workshop[]
+     */
+    public function findAllWorkshopsForHomepage(): array
     {
         return $this->createQueryBuilder('w')
-            ->where('w.something = :value')->setParameter('value', $value)
+            ->where('w.active = :value')
+            ->setParameter('value', true)
             ->orderBy('w.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
 }
