@@ -81,6 +81,13 @@ class Workshop
     private $hrSlug;
 
     /**
+     * @ORM\Column(type="boolean")
+     *
+     * @var bool
+     */
+    private $active = false;
+
+    /**
      * @ORM\Column(type="datetime")
      *
      * @var DateTime
@@ -199,6 +206,16 @@ class Workshop
     public function setHrDescription(string $hrDescription)
     {
         $this->hrDescription = $hrDescription;
+    }
+
+    public function setActive(bool $active)
+    {
+        $this->active = $active;
+    }
+
+    public function isActive(): bool
+    {
+        return $this->active;
     }
 
     public function getCreatedAt(): DateTime
