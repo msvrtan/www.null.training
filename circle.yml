@@ -15,6 +15,7 @@ jobs:
           - DATABASE_NAME=nulltraining_test
           - DATABASE_USER=root
           - DATABASE_PASSWORD=n0p455
+          - GA_TRACKING="UA-xxxxxxxx-1"
       - image: mysql:5.7
         environment:
           - MYSQL_ROOT_PASSWORD=n0p455
