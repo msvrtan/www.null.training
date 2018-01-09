@@ -33,22 +33,22 @@
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <li class="sidebar-brand">
-            <a class="js-scroll-trigger" href="#page-top">{% trans %}company.brandName{% endtrans %}</a>
+            <a class="js-scroll-trigger" href="{{ path('homepage', {'_locale': lang}) }}#page-top">{% trans %}company.brandName{% endtrans %}</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#page-top">{% trans %}homepage.link{% endtrans %}</a>
+            <a class="js-scroll-trigger" href="{{ path('homepage', {'_locale': lang}) }}#page-top">{% trans %}homepage.link{% endtrans %}</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#about">{% trans %}homepage.about.link{% endtrans %}</a>
+            <a class="js-scroll-trigger" href="{{ path('homepage', {'_locale': lang}) }}#about">{% trans %}homepage.about.link{% endtrans %}</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#services">{% trans %}homepage.services.link{% endtrans %}</a>
+            <a class="js-scroll-trigger" href="{{ path('homepage', {'_locale': lang}) }}#services">{% trans %}homepage.services.link{% endtrans %}</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#portfolio">{% trans %}homepage.portfolio.link{% endtrans %}</a>
+            <a class="js-scroll-trigger" href="{{ path('homepage', {'_locale': lang}) }}#portfolio">{% trans %}homepage.portfolio.link{% endtrans %}</a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="js-scroll-trigger" href="#contact">{% trans %}homepage.contact.link{% endtrans %}</a>
+            <a class="js-scroll-trigger" href="{{ path('homepage', {'_locale': lang}) }}#contact">{% trans %}homepage.contact.link{% endtrans %}</a>
         </li>
     </ul>
 </nav>
