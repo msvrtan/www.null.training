@@ -28,7 +28,26 @@ class WorkshopRepository extends ServiceEntityRepository
             ->orderBy('w.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
+    }
+
+    /**
+     * On workshop page, we are showing 'similar' workshops.
+     *
+     * For now it's hardcoded just to show 2 active workshops with current one excluded.
+     *
+     * @return Workshop[]
+     */
+    public function findSimilarWorkshops(Workshop $workshop): array
+    {
+        return $this->createQueryBuilder('w')
+            ->where('w.active = :value')
+            ->andWhere('w.id != :id')
+            ->setParameter('value', true)
+            ->setParameter('id', $workshop->getId())
+            ->orderBy('w.id', 'ASC')
+            ->setMaxResults(2)
+            ->getQuery()
+            ->getResult();
     }
 }

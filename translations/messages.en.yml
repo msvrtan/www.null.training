@@ -33,3 +33,8 @@ homepage:
         subtitle: Contact us now!
     contact:
         link: Contact
+
+workshop_page:
+    similar:
+        title: Similar workshops
+

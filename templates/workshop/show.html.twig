@@ -2,8 +2,50 @@
 
 {% block body %}
 
-    {{ workshop.title(lang) }}
-    {{ workshop.shortIntroduction(lang) }}
-    {{ workshop.description(lang) }}
+    <!-- Header -->
+    <header class="masthead " style="padding: 20px;">
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <h1 class="mb-1">{{ workshop.title(lang) }}</h1>
+            </div>
+            <div class="col-md-12  text-right">
+                <h3 class="mb-5"><em>{{ workshop.shortIntroduction(lang)|raw }}</em></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-right"></div>
+            <div class="col-md-7 text-left">
+                {{ workshop.description(lang)|raw }}
+            </div>
+            <div class="col-md-1 text-right">
+                &nbsp;
+            </div>
+        </div>
+    </header>
+
+    <!-- Similar workshops -->
+    <section class="content-section" id="portfolio">
+        <div class="container">
+            <div class="content-section-heading text-center">
+                <h2 class="mb-5">{% trans %}workshop_page.similar.title{% endtrans %}</h2>
+            </div>
+            <div class="row no-gutters">
+                {% for key, workshop in workshops %}
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="{{ path('workshop_details_' ~ lang, {'id': workshop.id, '_locale': lang, 'slug': workshop.slug(lang)}) }}">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    <h2>{{ workshop.title(lang) }}</h2>
+                                    <p class="mb-0">{{ workshop.shortIntroduction(lang)|raw }}</p>
+                                </span>
+                            </span>
+                            <img class="img-fluid" src="/img/portfolio-{{ (key)%4+1 }}.jpg" alt="">
+                        </a>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
 
 {% endblock %}
