@@ -78,7 +78,7 @@
 
                 {% for key, workshop in workshops %}
                     <div class="col-lg-6">
-                        <a class="portfolio-item" href="{{ path('workshop_details_' ~ lang, {'id': workshop.id, 'lang': lang, 'slug': workshop.slug(lang)}) }}">
+                        <a class="portfolio-item" href="{{ path('workshop_details_' ~ lang, {'id': workshop.id, '_locale': lang, 'slug': workshop.slug(lang)}) }}">
                             <span class="caption">
                                 <span class="caption-content">
                                     <h2>{{ workshop.title(lang) }}</h2>
