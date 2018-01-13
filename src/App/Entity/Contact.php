@@ -6,6 +6,7 @@ namespace App\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @see ContactFixtures
@@ -25,6 +26,7 @@ class Contact
 
     /**
      * @ORM\Column(type="string",length=200)
+     * @Assert\NotBlank()
      *
      * @var string
      */
@@ -32,6 +34,8 @@ class Contact
 
     /**
      * @ORM\Column(type="string",length=200)
+     * @Assert\NotBlank()
+     * @Assert\Email()
      *
      * @var string
      */
@@ -39,6 +43,7 @@ class Contact
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
      *
      * @var string
      */
@@ -61,7 +66,7 @@ class Contact
         return $this->id;
     }
 
-    public function getName(): string
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -71,7 +76,7 @@ class Contact
         $this->name = $name;
     }
 
-    public function getEmailAddress(): string
+    public function getEmailAddress(): ?string
     {
         return $this->emailAddress;
     }
@@ -81,7 +86,7 @@ class Contact
         $this->emailAddress = $emailAddress;
     }
 
-    public function getBody(): string
+    public function getBody(): ?string
     {
         return $this->body;
     }
