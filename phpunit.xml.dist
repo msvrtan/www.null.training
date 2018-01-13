@@ -33,6 +33,8 @@
         <!-- Delivery is disabled by default via "null://localhost" -->
         <env name="MAILER_URL" value="null://localhost"/>
         <!-- ###- symfony/swiftmailer-bundle ### -->
+        <env name="GA_TRACKING" value="UA-xxxxxxxx-1"/>
+
     </php>
 
     <testsuites>
