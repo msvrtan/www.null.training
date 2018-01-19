@@ -24,7 +24,9 @@ class WorkshopRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('w')
             ->where('w.active = :active')
+            ->andWhere('w.showOnHomepage = :showOnHomepage')
             ->setParameter('active', true)
+            ->setParameter('showOnHomepage', true)
             ->orderBy('w.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
