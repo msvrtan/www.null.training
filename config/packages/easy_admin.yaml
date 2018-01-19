@@ -9,8 +9,8 @@ easy_admin:
         fields:
           - { property: 'enTitle', label: 'Title (ENG)' }
           - { property: 'hrTitle', label: 'Title (HR)' }
-          - { property: 'enShortIntroduction', label: 'Short intro (ENG)' }
-          - { property: 'hrShortIntroduction', label: 'Short intro (HR)' }
+          - { property: 'enShortIntroduction', label: 'Short intro (ENG)', 'type': 'text' }
+          - { property: 'hrShortIntroduction', label: 'Short intro (HR)', 'type': 'text' }
           - { property: 'enDescription', label: 'Description (ENG)' }
           - { property: 'hrDescription', label: 'Description (HR)' }
           - { property: 'active', label: 'Active' }
