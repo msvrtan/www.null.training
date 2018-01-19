@@ -41,7 +41,7 @@ services:
       DATABASE_SERVER_VERSION: 5.7
       DATABASE_HOST: training_mysql_dev
       DATABASE_PORT: 3306
-      DATABASE_NAME: training_dev
+      DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
       GA_TRACKING: "UA-xxxxxxxx-1"
@@ -69,7 +69,7 @@ services:
       DATABASE_SERVER_VERSION: 5.7
       DATABASE_HOST: training_mysql_dev
       DATABASE_PORT: 3306
-      DATABASE_NAME: training_dev
+      DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
       GA_TRACKING: "UA-xxxxxxxx-1"
@@ -86,7 +86,7 @@ services:
       - "3306"
     environment:
       MYSQL_ROOT_PASSWORD: n0p455
-      MYSQL_DATABASE: training_dev
+      MYSQL_DATABASE: nulltraining_dev
       MYSQL_USER: training
       MYSQL_PASSWORD: n0p455
 
@@ -106,7 +106,7 @@ services:
       DATABASE_SERVER_VERSION: 5.7
       DATABASE_HOST: training-mysql-dev
       DATABASE_PORT: 3306
-      DATABASE_NAME: training_dev
+      DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
       GA_TRACKING: "UA-xxxxxxxx-1"
@@ -130,7 +130,7 @@ services:
       DATABASE_SERVER_VERSION: 5.7
       DATABASE_HOST: training_mysql_dev
       DATABASE_PORT: 3306
-      DATABASE_NAME: training_dev
+      DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
       GA_TRACKING: "UA-xxxxxxxx-1"
