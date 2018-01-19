@@ -88,6 +88,13 @@ class Workshop
     private $active = false;
 
     /**
+     * @ORM\Column(type="boolean")
+     *
+     * @var bool
+     */
+    private $showOnHomepage = false;
+
+    /**
      * @ORM\Column(type="datetime")
      *
      * @var DateTime
@@ -216,6 +223,16 @@ class Workshop
     public function isActive(): bool
     {
         return $this->active;
+    }
+
+    public function isShowOnHomepage(): bool
+    {
+        return $this->showOnHomepage;
+    }
+
+    public function setShowOnHomepage(bool $showOnHomepage)
+    {
+        $this->showOnHomepage = $showOnHomepage;
     }
 
     public function getCreatedAt(): DateTime

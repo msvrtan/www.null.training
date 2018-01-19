@@ -4,7 +4,7 @@ easy_admin:
     Workshop:
       class: App\Entity\Workshop
       list:
-        fields: ['id', 'enTitle', 'hrTitle', 'active', 'createdAt']
+        fields: ['id', 'enTitle', 'hrTitle', 'active','showOnHomepage', 'createdAt']
       form:  # <-- 'form' is applied to both 'new' and 'edit' views
         fields:
           - { property: 'enTitle', label: 'Title (ENG)' }
@@ -14,6 +14,7 @@ easy_admin:
           - { property: 'enDescription', label: 'Description (ENG)' }
           - { property: 'hrDescription', label: 'Description (HR)' }
           - { property: 'active', label: 'Active' }
+          - { property: 'showOnHomepage', label: 'Show on homepage' }
     User:
       class: App\Entity\User
       label: Users
