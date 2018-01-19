@@ -7,6 +7,7 @@ namespace App\Entity;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Nette\Utils\Strings;
+use Parsedown;
 
 /**
  * @see WorkshopFixtures
@@ -138,6 +139,18 @@ class Workshop
                 return $this->hrDescription;
             case 'en':
                 return $this->enDescription;
+        }
+    }
+
+    public function getDescriptionAsHtml(string $lang): string
+    {
+        $parsedown = new Parsedown();
+
+        switch ($lang) {
+            case 'hr':
+                return $parsedown->text($this->hrDescription);
+            case 'en':
+                return $parsedown->text($this->enDescription);
         }
     }
 

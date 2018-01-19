@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-4 text-right"></div>
             <div class="col-md-7 text-left">
-                {{ workshop.description(lang)|raw }}
+                {{ workshop.descriptionAsHtml(lang)|raw }}
             </div>
             <div class="col-md-1 text-right">
                 &nbsp;
@@ -45,7 +45,7 @@
                 {% endfor %}
 
             </div>
-        </div>
+        </div><div class="/ve">b</div>
     </section>
 
 {% endblock %}
