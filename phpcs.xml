@@ -33,7 +33,7 @@
             <property name="absoluteLineLimit" value="150"/>
 
         </properties>
-        <exclude-pattern>*GitHubInstallationApplicationContext*</exclude-pattern>
+        <exclude-pattern>*WorkshopFixtures*</exclude-pattern>
     </rule>
     <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
     <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
@@ -42,15 +42,7 @@
     <rule ref="Generic.Metrics.NestingLevel"/>
     <rule ref="Generic.NamingConventions.ConstructorName"/>
     <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
-    <rule ref="Generic.NamingConventions.CamelCapsFunctionName">
-        <exclude-pattern>src/DevboardLib/GitHub/Build/BuildStatus.php</exclude-pattern>
-        <exclude-pattern>src/DevboardLib/GitHub/Status/StatusState.php</exclude-pattern>
-        <exclude-pattern>tests/DataFixtures/Provider/GitHubBuildEntityProvider.php</exclude-pattern>
-        <exclude-pattern>tests/DataFixtures/Provider/GitHubBuildItemEntityProvider.php</exclude-pattern>
-        <exclude-pattern>tests/DataFixtures/Provider/GitHubBranchEntityProvider.php</exclude-pattern>
-        <exclude-pattern>tests/DataFixtures/Provider/GitHubRepoEntityProvider.php</exclude-pattern>
-        <exclude-pattern>tests/DataFixtures/Provider/GitHubTagEntityProvider.php</exclude-pattern>
-    </rule>
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
     <rule ref="Generic.PHP.ForbiddenFunctions"/>
