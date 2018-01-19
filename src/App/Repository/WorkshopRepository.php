@@ -23,8 +23,8 @@ class WorkshopRepository extends ServiceEntityRepository
     public function findAllWorkshopsForHomepage(): array
     {
         return $this->createQueryBuilder('w')
-            ->where('w.active = :value')
-            ->setParameter('value', true)
+            ->where('w.active = :active')
+            ->setParameter('active', true)
             ->orderBy('w.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
@@ -41,9 +41,9 @@ class WorkshopRepository extends ServiceEntityRepository
     public function findSimilarWorkshops(Workshop $workshop): array
     {
         return $this->createQueryBuilder('w')
-            ->where('w.active = :value')
+            ->where('w.active = :active')
             ->andWhere('w.id != :id')
-            ->setParameter('value', true)
+            ->setParameter('active', true)
             ->setParameter('id', $workshop->getId())
             ->orderBy('w.id', 'ASC')
             ->setMaxResults(2)
