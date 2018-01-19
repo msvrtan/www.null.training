@@ -24,6 +24,7 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $cooking101->setHrShortIntroduction('Osnove kuhanja u obliku dvodnevne radionice');
         $cooking101->setHrDescription('U ovoj radionici ćemo proći: - kuhanje jaja ...');
         $cooking101->setActive(false);
+        $cooking101->setShowOnHomepage(false);
 
         $introToUnitTesting = new Workshop();
         $introToUnitTesting->setEnTitle('Introduction to unit testing');
@@ -33,6 +34,7 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $introToUnitTesting->setHrShortIntroduction('Povećajte kvalitetu svog koda i produktivnost pišući unit testove.');
         $introToUnitTesting->setHrDescription('xxxxx');
         $introToUnitTesting->setActive(true);
+        $introToUnitTesting->setShowOnHomepage(true);
 
         $introToSymfony = new Workshop();
         $introToSymfony->setEnTitle('Introduction to Symfony framework');
@@ -42,6 +44,7 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $introToSymfony->setHrShortIntroduction('Razmišljate o prelasku na Symfony framework?');
         $introToSymfony->setHrDescription('xxxxx');
         $introToSymfony->setActive(true);
+        $introToSymfony->setShowOnHomepage(true);
 
         $symfony4 = new Workshop();
         $symfony4->setEnTitle("Symfony 4: what's new?");
@@ -51,6 +54,7 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $symfony4->setHrShortIntroduction('Jednodnevna radionica u kojoj prolazimo kroz sve promjene i novosti koje su došle sa verzijom 4.');
         $symfony4->setHrDescription('xxxxx');
         $symfony4->setActive(true);
+        $symfony4->setShowOnHomepage(true);
 
         $codeReviews = new Workshop();
         $codeReviews->setEnTitle('Code reviews');
@@ -60,6 +64,7 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $codeReviews->setHrShortIntroduction('Nitko ne bi smio biti <b>jedina</b> osoba koja razumije dijelove vašega projekta.');
         $codeReviews->setHrDescription('xxxxx');
         $codeReviews->setActive(true);
+        $codeReviews->setShowOnHomepage(true);
 
         $acceptanceTesting = new Workshop();
         $acceptanceTesting->setEnTitle('Acceptance testing');
@@ -69,6 +74,7 @@ class WorkshopFixtures extends AbstractFixture implements OrderedFixtureInterfac
         $acceptanceTesting->setHrShortIntroduction('Kroz pisanje acceptanca testova potvrdjujemo da se naše promjene poklapaju sa "user story"-ima.');
         $acceptanceTesting->setHrDescription('xxxxx');
         $acceptanceTesting->setActive(true);
+        $acceptanceTesting->setShowOnHomepage(true);
 
         $manager->persist($cooking101);
         $manager->persist($introToUnitTesting);
