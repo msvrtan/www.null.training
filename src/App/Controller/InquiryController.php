@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Entity\Contact;
-use App\Repository\ContactRepository;
+use App\Entity\Inquiry;
+use App\Repository\InquiryRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\ControllerTrait;
@@ -17,14 +17,14 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 
-class ContactController implements ContainerAwareInterface
+class InquiryController implements ContainerAwareInterface
 {
     use ContainerAwareTrait;
     use ControllerTrait;
-    /** @var ContactRepository */
+    /** @var InquiryRepository */
     private $contactRepository;
 
-    public function __construct(ContactRepository $contactRepository)
+    public function __construct(InquiryRepository $contactRepository)
     {
         $this->contactRepository = $contactRepository;
     }
@@ -36,7 +36,7 @@ class ContactController implements ContainerAwareInterface
      */
     public function showAction(Request $request)
     {
-        $contact = new Contact();
+        $contact = new Inquiry();
 
         $form = $this->createFormBuilder($contact)
             ->add('name', TextType::class)

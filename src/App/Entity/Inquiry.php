@@ -9,11 +9,11 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @see ContactFixtures
+ * @see InquiryFixtures
  *
- * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\InquiryRepository")
  */
-class Contact
+class Inquiry
 {
     /**
      * @ORM\Id

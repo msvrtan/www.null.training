@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace App\DataFixtures\ORM;
 
-use App\Entity\Contact;
+use App\Entity\Inquiry;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class ContactFixtures extends AbstractFixture implements OrderedFixtureInterface
+class InquiryFixtures extends AbstractFixture implements OrderedFixtureInterface
 {
     /**
      * {@inheritdoc}
      */
     public function load(ObjectManager $manager)
     {
-        $contact1 = new Contact();
+        $contact1 = new Inquiry();
         $contact1->setName('John Smith');
         $contact1->setEmailAddress('john@example.com');
         $contact1->setBody('We are interested in .....');
