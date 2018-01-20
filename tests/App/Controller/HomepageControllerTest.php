@@ -34,7 +34,7 @@ class HomepageControllerTest extends WebTestCase
 
         // Assert
         self::assertTrue($client->getResponse() instanceof RedirectResponse);
-        self::assertEquals('/hr/', $location);
+        self::assertEquals('/en/', $location);
     }
 
     /**

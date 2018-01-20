@@ -30,7 +30,7 @@ class HomepageController
      */
     public function indexAction(Request $request)
     {
-        $preferredLanguage = $request->getPreferredLanguage(['en', 'hr']);
+        $preferredLanguage = $request->getPreferredLanguage(['en']);
 
         $url = $this->router->generate('homepage', ['_locale' => $preferredLanguage]);
 
