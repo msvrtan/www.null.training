@@ -15,7 +15,10 @@ jobs:
           - DATABASE_NAME=nulltraining_test
           - DATABASE_USER=root
           - DATABASE_PASSWORD=n0p455
+          - MAILER_URL="smtp://smtp.mailgun.org?encryption=tls&username=USERNAME&password=PASSWORD"
           - GA_TRACKING="UA-xxxxxxxx-1"
+          - INQUIRY_FROM_EMAIL_ADDRESS="inquiry@example.com"
+          - INQUIRY_TO_EMAIL_ADDRESS="info@example.com"
       - image: mysql:5.7
         environment:
           - MYSQL_ROOT_PASSWORD=n0p455

@@ -44,7 +44,10 @@ services:
       DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
+      MAILER_URL: "smtp://smtp.mailgun.org?encryption=tls&username=USERNAME&password=PASSWORD"
       GA_TRACKING: "UA-xxxxxxxx-1"
+      INQUIRY_FROM_EMAIL_ADDRESS: "inquiry@example.com"
+      INQUIRY_TO_EMAIL_ADDRESS: "info@example.com"
     links:
       - training-mysql-dev
     extra_hosts:
@@ -72,13 +75,16 @@ services:
       DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
+      MAILER_URL: "smtp://smtp.mailgun.org?encryption=tls&username=USERNAME&password=PASSWORD"
       GA_TRACKING: "UA-xxxxxxxx-1"
+      INQUIRY_FROM_EMAIL_ADDRESS: "inquiry@example.com"
+      INQUIRY_TO_EMAIL_ADDRESS: "info@example.com"
     links:
       - training-mysql-dev
     extra_hosts:
       - "dev.training.loc:172.17.0.1"
       - "test.training.loc:172.17.0.1"
-      
+
   training-mysql-dev:
     image: "mysql:5.7"
     container_name: training_mysql_dev
@@ -109,7 +115,10 @@ services:
       DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
+      MAILER_URL: "smtp://smtp.mailgun.org?encryption=tls&username=USERNAME&password=PASSWORD"
       GA_TRACKING: "UA-xxxxxxxx-1"
+      INQUIRY_FROM_EMAIL_ADDRESS: "inquiry@example.com"
+      INQUIRY_TO_EMAIL_ADDRESS: "info@example.com"
     extra_hosts:
       - "dev.training.loc:172.17.0.1"
       - "test.training.loc:172.17.0.1"
@@ -133,7 +142,10 @@ services:
       DATABASE_NAME: nulltraining_dev
       DATABASE_USER: root
       DATABASE_PASSWORD: n0p455
+      MAILER_URL: "smtp://smtp.mailgun.org?encryption=tls&username=USERNAME&password=PASSWORD"
       GA_TRACKING: "UA-xxxxxxxx-1"
+      INQUIRY_FROM_EMAIL_ADDRESS: "inquiry@example.com"
+      INQUIRY_TO_EMAIL_ADDRESS: "info@example.com"
     extra_hosts:
       - "dev.training.loc:172.17.0.1"
       - "test.training.loc:172.17.0.1"
