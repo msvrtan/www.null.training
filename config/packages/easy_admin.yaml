@@ -18,3 +18,6 @@ easy_admin:
     User:
       class: App\Entity\User
       label: Users
+    Inquiry:
+      class: App\Entity\Inquiry
+      label: Inquiries
