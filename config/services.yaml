@@ -25,5 +25,6 @@ services:
         tags: ['controller.service_arguments']
 
     Symfony\Component\Routing\Router: '@router'
+    Symfony\Bundle\TwigBundle\TwigEngine: '@templating'
 
 

@@ -1,0 +1,18 @@
+<p>
+    New inquiry received from {{ inquiry.name }} ({{ inquiry.emailAddress }})
+</p>
+<h3>
+    Message:
+</h3>
+<p>
+    {{ inquiry.body }}
+</p>
+<h4>
+    Created at: {{ inquiry.createdAt|date }}
+</h4>
+
+
+<p>
+    <a href="{{ absolute_url('/admin/?entity=Inquiry&action=list') }}">Link to admin</a>
+</p>
+

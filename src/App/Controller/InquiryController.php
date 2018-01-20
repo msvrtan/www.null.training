@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Inquiry;
 use App\Repository\InquiryRepository;
+use App\Service\InquiryReceivedEmailService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\ControllerTrait;
@@ -22,11 +23,16 @@ class InquiryController implements ContainerAwareInterface
     use ContainerAwareTrait;
     use ControllerTrait;
     /** @var InquiryRepository */
-    private $contactRepository;
+    private $inquiryRepository;
+    /** @var InquiryReceivedEmailService */
+    private $inquiryReceivedEmailService;
 
-    public function __construct(InquiryRepository $contactRepository)
-    {
-        $this->contactRepository = $contactRepository;
+    public function __construct(
+        InquiryRepository $inquiryRepository,
+        InquiryReceivedEmailService $inquiryReceivedEmailService
+    ) {
+        $this->inquiryRepository           = $inquiryRepository;
+        $this->inquiryReceivedEmailService = $inquiryReceivedEmailService;
     }
 
     /**
@@ -36,9 +42,9 @@ class InquiryController implements ContainerAwareInterface
      */
     public function showAction(Request $request)
     {
-        $contact = new Inquiry();
+        $inquiry = new Inquiry();
 
-        $form = $this->createFormBuilder($contact)
+        $form = $this->createFormBuilder($inquiry)
             ->add('name', TextType::class)
             ->add('emailAddress', EmailType::class)
             ->add('body', TextareaType::class)
@@ -48,11 +54,13 @@ class InquiryController implements ContainerAwareInterface
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $contact = $form->getData();
+            $inquiry = $form->getData();
 
             $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
+            $em->persist($inquiry);
             $em->flush();
+
+            $this->inquiryReceivedEmailService->notify($inquiry);
 
             return $this->redirectToRoute('contact_thank_you_'.$request->getLocale());
         }
