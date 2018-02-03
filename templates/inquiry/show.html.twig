@@ -2,8 +2,47 @@
 
 {% block body %}
 
-    <section class="content-section" id="portfolio">
-        <div class="container">{{ form_start(form) }}
+    <!-- Services -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+        <div class="container">
+            <div class="content-section-heading">
+                <h3 class="text-secondary mb-0">{% trans %}contact.subtitle{% endtrans %}</h3>
+                <h2 class="mb-5">{% trans %}contact.title{% endtrans %}</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                    <span class="service-icon rounded-circle mx-auto mb-3">
+                        <i class="icon-pencil"></i>
+                    </span>
+                    <h4>
+                        <strong>{% trans %}contact.form.title{% endtrans %}</strong>
+                    </h4>
+                    <p class="text-faded mb-0">{% trans %}contact.form.intro {% endtrans %} <i class="fa fa-heart"></i></p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+                    <span class="service-icon rounded-circle mx-auto mb-3">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <h4>
+                        <strong>{% trans %}contact.email.title{% endtrans %}</strong>
+                    </h4>
+                    <p class="text-faded mb-0">{% trans %}contact.email.intro {% endtrans %}</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+                    <span class="service-icon rounded-circle mx-auto mb-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <h4>
+                        <strong>{% trans %}contact.phone.title{% endtrans %}</strong>
+                    </h4>
+                    <p class="text-faded mb-0">{% trans %}contact.phone.intro {% endtrans %}</i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="callout" id="contact_details" style="padding:2rem">
+        <div class="container text-center text-white mb-2">
+            {{ form_start(form) }}
             {{ form_widget(form) }}
             {{ form_end(form) }}
         </div>

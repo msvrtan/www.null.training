@@ -39,5 +39,16 @@ workshop_page:
         title: Slične radionice
 
 contact:
+    title: Kontakt
+    subtitle: Postoji nekoliko načina za kontakt
+    form:
+      title: Forma za upite
+      intro: Sugeriram formu kao najlakši način komunikacije
+    email:
+      title: E-mail
+      intro: info@null.training
+    phone:
+      title: Telefon
+      intro: +385 99 6687-527
     thank_you: Hvala
     get_back_soon: Javimo se uskoro
