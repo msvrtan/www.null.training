@@ -9,12 +9,12 @@ homepage:
     about:
         link: About
         question: Want to boost your PHP skills?
-        offer: We are offering limited number of workshops & company trainings
-        offerCallToAction: What We Offer
+        offer: I'm offering limited number of workshops & company trainings
+        offerCallToAction: What I Offer
     services:
         link: Services
         title: Services
-        subtitle: What We Offer
+        subtitle: What I Offer
         workshops:
           title: Workshops
           intro: One and two day workshops
@@ -30,7 +30,7 @@ homepage:
     callout:
         link: Improve your team!
         title: Improve your team!
-        subtitle: Contact us now!
+        subtitle: Contact me now!
     contact:
         link: Contact
 
@@ -51,4 +51,4 @@ contact:
       title: Phone
       intro: +385 99 6687-527
     thank_you: Thank you
-    get_back_soon: We will get back to you quickly
+    get_back_soon: I will get back to you quickly

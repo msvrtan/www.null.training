@@ -5,16 +5,16 @@ company:
 
 homepage:
     link: Naslovnica
-    findOutMore: Više o nama
+    findOutMore: Više o meni
     about:
-        link: O nama
+        link: O meni
         question: Želite unaprijediti znanje PHPa?
-        offer: Nudimo (za sada) ograničeni broj javnih radionica odnosno treninga u Vašoj kompaniji
+        offer: Nudim (za sada) ograničeni broj javnih radionica odnosno treninga u Vašoj kompaniji
         offerCallToAction: Ponuda
     services:
         link: Usluge
         title: Usluge
-        subtitle: Što nudimo
+        subtitle: Moja ponuda
         workshops:
           title: Radionice
           intro: Jednodnevne i dvodnevne radionice
@@ -30,7 +30,7 @@ homepage:
     callout:
         link: Unaprijedite tim!
         title: Unaprijedite tim!
-        subtitle: Kontaktirajte nas već danas!
+        subtitle: Kontaktirajte me već danas!
     contact:
         link: Kontakt
 
@@ -51,4 +51,4 @@ contact:
       title: Telefon
       intro: +385 99 6687-527
     thank_you: Hvala
-    get_back_soon: Javimo se uskoro
+    get_back_soon: Javim se uskoro
