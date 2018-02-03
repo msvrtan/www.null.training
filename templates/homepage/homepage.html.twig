@@ -99,7 +99,8 @@
     <section class="callout">
         <div class="container text-center">
             <h2 class="mx-auto mb-5">{% trans %}homepage.callout.title{% endtrans %}</h2>
-            <a class="btn btn-primary btn-xl" href="#url-missing">{% trans %}homepage.callout.subtitle{% endtrans %}</a>
+            <a class="btn btn-primary btn-xl" href="{{ path('contact_' ~ lang) }}">{% trans %}homepage.callout.subtitle{% endtrans %}</a>
+
         </div>
     </section>
 
