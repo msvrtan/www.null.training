@@ -45,10 +45,10 @@ class InquiryController implements ContainerAwareInterface
         $inquiry = new Inquiry();
 
         $form = $this->createFormBuilder($inquiry)
-            ->add('name', TextType::class)
-            ->add('emailAddress', EmailType::class)
-            ->add('body', TextareaType::class)
-            ->add('send', SubmitType::class, ['label' => 'Send in'])
+            ->add('name', TextType::class, ['label'=> 'Your name:'])
+            ->add('emailAddress', EmailType::class, ['label'=> 'E-mail address:'])
+            ->add('body', TextareaType::class, ['label'=> 'Message:', 'attr' => ['cols' => '12', 'rows' => '12']])
+            ->add('send', SubmitType::class, ['label' => 'Send'])
             ->getForm();
 
         $form->handleRequest($request);
