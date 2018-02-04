@@ -47,7 +47,7 @@ jobs:
 
       - run:
           name: Run fixtures
-          command: bin/console doctrine:fixtures:load --no-interaction --env=test
+          command: bin/console doctrine:fixtures:load --no-interaction --append --env=test
 
       - run:
           name: PHPSpec
