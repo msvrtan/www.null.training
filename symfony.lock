@@ -155,6 +155,9 @@
     "myclabs/deep-copy": {
         "version": "1.7.0"
     },
+    "myclabs/php-enum": {
+        "version": "1.5.2"
+    },
     "nette/bootstrap": {
         "version": "v2.4.5"
     },
