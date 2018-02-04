@@ -15,6 +15,22 @@ easy_admin:
           - { property: 'hrDescription', label: 'Description (HR)' }
           - { property: 'active', label: 'Active' }
           - { property: 'showOnHomepage', label: 'Show on homepage' }
+    WorkshopSession:
+      class: App\Entity\WorkshopSession
+      label: Workshop Sessions
+      list:
+        fields: ['id', 'workshop', 'venue', 'city', 'startDate', 'endDate', 'startTime', 'endTime', 'language', 'priceAmount', 'priceCurrency', 'createdAt']
+      form:
+        fields:
+        - { property: 'workshop', label: 'Workshop' }
+        - { property: 'venue', label: 'Venue' }
+        - { property: 'startDate', label: 'Start Date' }
+        - { property: 'endDate', label: 'End Date' }
+        - { property: 'startTime', label: 'Start Time' }
+        - { property: 'endTime', label: 'End Time' }
+        - { property: 'language', label: 'Language', type: 'choice', type_options: { choices: { 'HR': 'HR', 'EN': 'EN' } } }
+        - { property: 'priceAmount', label: 'Price Amount (include lipas/cents!)' }
+        - { property: 'priceCurrency', label: 'Price Currency', type: 'choice', type_options: { choices: { 'HRK': 'HRK', 'EUR': 'EUR' } } }
     User:
       class: App\Entity\User
       label: Users
