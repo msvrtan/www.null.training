@@ -16,6 +16,7 @@ easy_admin:
           - { property: 'active', label: 'Active' }
           - { property: 'showOnHomepage', label: 'Show on homepage' }
     WorkshopSession:
+      controller: App\Controller\AdminWorkshopSessionController
       class: App\Entity\WorkshopSession
       label: Workshop Sessions
       list:
