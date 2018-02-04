@@ -21,11 +21,24 @@ easy_admin:
     Inquiry:
       class: App\Entity\Inquiry
       label: Inquiries
+    Venue:
+      class: App\Entity\Venue
+      label: Venues
+      list:
+        fields: ['id', 'name', 'address', 'description', 'city', 'priority', 'additionalInformation', 'createdAt']
+      form:  # <-- 'form' is applied to both 'new' and 'edit' views
+        fields:
+          - { property: 'name', label: 'Name' }
+          - { property: 'address', label: 'Address' }
+          - { property: 'description', label: 'Description' }
+          - { property: 'city', label: 'City' }
+          - { property: 'priority', label: 'Priority' }
+          - { property: 'additionalInformation', label: 'Additional Information' }
     City:
       class: App\Entity\City
       label: Cities
       list:
-        fields: ['cityId', 'name', 'country', 'priority', 'createdAt']
+        fields: ['id', 'name', 'country', 'priority', 'createdAt']
       form:  # <-- 'form' is applied to both 'new' and 'edit' views
         fields:
           - { property: 'name', label: 'Name' }
@@ -34,3 +47,4 @@ easy_admin:
     Country:
       class: App\Entity\Country
       label: Countries
+

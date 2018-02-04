@@ -1,4 +1,5 @@
 parameters:
 	ignoreErrors:
 	    - '#Calling method getContent() on possibly null value of type Symfony\\Component\\HttpFoundation\\Response|null.#'
+	    - '#Method App\\DataFixtures\\ORM\\VenueFixtures\:\:getCity\(\) should return App\\Entity\\City but returns object.#'
 
