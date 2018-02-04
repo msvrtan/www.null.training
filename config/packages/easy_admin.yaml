@@ -21,3 +21,16 @@ easy_admin:
     Inquiry:
       class: App\Entity\Inquiry
       label: Inquiries
+    City:
+      class: App\Entity\City
+      label: Cities
+      list:
+        fields: ['cityId', 'name', 'country', 'priority', 'createdAt']
+      form:  # <-- 'form' is applied to both 'new' and 'edit' views
+        fields:
+          - { property: 'name', label: 'Name' }
+          - { property: 'country', label: 'Country' }
+          - { property: 'priority', label: 'Priority' }
+    Country:
+      class: App\Entity\Country
+      label: Countries
