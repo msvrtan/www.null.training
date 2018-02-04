@@ -21,3 +21,9 @@ doctrine:
                 dir: '%kernel.project_dir%/src/App/Entity'
                 prefix: 'App\Entity'
                 alias: App
+            TheaterBundle:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/NullDev/TheaterBundle/Entity'
+                prefix: 'NullDev\TheaterBundle'
+                alias: NullDevTheaterBundle
