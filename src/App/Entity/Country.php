@@ -35,7 +35,7 @@ class Country
      *
      * @var int
      */
-    private $priority=10;
+    private $priority = 10;
 
     /**
      * @ORM\Column(type="datetime")
