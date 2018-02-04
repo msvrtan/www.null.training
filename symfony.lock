@@ -149,6 +149,9 @@
     "mockery/mockery": {
         "version": "1.0"
     },
+    "moneyphp/money": {
+        "version": "v3.1.1"
+    },
     "monolog/monolog": {
         "version": "1.23.0"
     },
