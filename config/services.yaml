@@ -27,4 +27,12 @@ services:
     Symfony\Component\Routing\Router: '@router'
     Symfony\Bundle\TwigBundle\TwigEngine: '@templating'
 
+    Broadway\CommandHandling\CommandBus:
+        alias: broadway.command_handling.command_bus
+        public: true
+
+
+    Broadway\EventHandling\EventBus:
+        alias: broadway.event_handling.event_bus
+        public: true
 
