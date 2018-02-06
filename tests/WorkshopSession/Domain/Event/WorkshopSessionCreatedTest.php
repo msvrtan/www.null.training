@@ -60,7 +60,7 @@ class WorkshopSessionCreatedTest extends TestCase
         $this->startTime  = new DateTime('2018-01-01T00:01:00+00:00');
         $this->endTime    = new DateTime('2018-01-01T00:01:00+00:00');
         $this->language   = 'language';
-        $this->price      = new Money('amount', new Currency('code'));
+        $this->price      = Money::HRK(12500);
         $this->createdAt  = new DateTime('2018-01-01T00:01:00+00:00');
         $this->sut        = new WorkshopSessionCreated(
             $this->id,
@@ -86,7 +86,7 @@ class WorkshopSessionCreatedTest extends TestCase
         $startTime  = new DateTime('2018-01-01T00:01:00+00:00');
         $endTime    = new DateTime('2018-01-01T00:01:00+00:00');
         $language   = 'language';
-        $price      = new Money('amount', new Currency('code'));
+        $price      = Money::HRK(12500);
         $result     = $this->sut->create(
             $id, $workshopId, $venueId, $startDate, $endDate, $startTime, $endTime, $language, $price
         );
@@ -154,7 +154,7 @@ class WorkshopSessionCreatedTest extends TestCase
             'startTime' => '2018-01-01T00:01:00+00:00',
             'endTime'   => '2018-01-01T00:01:00+00:00',
             'language'  => 'language',
-            'price'     => ['amount'=>'amount', 'currency'=>'code'],
+            'price'      => ['amount' => '12500', 'currency' => 'HRK'],
             'createdAt' => '2018-01-01T00:01:00+00:00',
         ];
 
