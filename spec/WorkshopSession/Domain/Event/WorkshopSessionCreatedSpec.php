@@ -46,12 +46,10 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
         DateTime $startDate,
         DateTime $endDate,
         DateTime $startTime,
-        DateTime $endTime,
-        Money $price
+        DateTime $endTime
     ) {
-        $this->create($id, 1, 'venue-id', $startDate, $endDate, $startTime, $endTime, 'HR', $price)->shouldReturnAnInstanceOf(
-            WorkshopSessionCreated::class
-        );
+        $this->create($id, 1, 'venue-id', $startDate, $endDate, $startTime, $endTime, 'HR', Money::HRK(12500))
+            ->shouldReturnAnInstanceOf( WorkshopSessionCreated::class);
     }
 
     public function it_exposes_id(WorkshopSessionId $id)
@@ -91,7 +89,7 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
 
     public function it_exposes_language()
     {
-        $this->getLanguage()->shouldReturn('language');
+        $this->getLanguage()->shouldReturn('HR');
     }
 
     public function it_exposes_price(Money $price)
