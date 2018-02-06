@@ -29,7 +29,7 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
             $endDate,
             $startTime,
             $endTime,
-            $language = 'language',
+            $language = 'HR',
             Money::HRK(12500),
             $createdAt
         );
@@ -49,7 +49,7 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
         DateTime $endTime,
         Money $price
     ) {
-        $this->create($id, 1, 'venue-id', $startDate, $endDate, $startTime, $endTime, $language, $price)->shouldReturnAnInstanceOf(
+        $this->create($id, 1, 'venue-id', $startDate, $endDate, $startTime, $endTime, 'HR', $price)->shouldReturnAnInstanceOf(
             WorkshopSessionCreated::class
         );
     }
@@ -110,7 +110,6 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
         DateTime $endDate,
         DateTime $startTime,
         DateTime $endTime,
-        Money $price,
         DateTime $createdAt
     ) {
         $id->serialize()->shouldBeCalled()->willReturn('id');
@@ -129,7 +128,7 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
                 'endDate'    => '2018-01-01T00:01:00+00:00',
                 'startTime'  => '2018-01-01T00:01:00+00:00',
                 'endTime'    => '2018-01-01T00:01:00+00:00',
-                'language'   => 'language',
+                'language'   => 'HR',
                 'price'      => ['amount' => '12500', 'currency' => 'HRK'],
                 'createdAt'  => '2018-01-01T00:01:00+00:00',
             ]
@@ -146,7 +145,7 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
             'endDate'    => '2018-01-01T00:01:00+00:00',
             'startTime'  => '2018-01-01T00:01:00+00:00',
             'endTime'    => '2018-01-01T00:01:00+00:00',
-            'language'   => 'language',
+            'language'   => 'HR',
             'price'      => ['amount' => '12500', 'currency' => 'HRK'],
             'createdAt'  => '2018-01-01T00:01:00+00:00',
         ];
