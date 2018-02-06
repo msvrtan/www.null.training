@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca2e1c3738cc30726e0bff9124f4e6fd",
+    "content-hash": "4bf6572f235f795242fc15b2cca12f3c",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -227,6 +227,76 @@
                 "event sourcing"
             ],
             "time": "2017-12-11T16:52:13+00:00"
+        },
+        {
+            "name": "broadway/broadway-saga",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/broadway/broadway-saga.git",
+                "reference": "8d92e6ef933794b0ccb0bda158742ec5b44261ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/broadway/broadway-saga/zipball/8d92e6ef933794b0ccb0bda158742ec5b44261ba",
+                "reference": "8d92e6ef933794b0ccb0bda158742ec5b44261ba",
+                "shasum": ""
+            },
+            "require": {
+                "beberlei/assert": "^2.0",
+                "broadway/broadway": "^2.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8",
+                "ramsey/uuid": "^3.3"
+            },
+            "suggest": {
+                "broadway/saga-state-mongodb": "For persisting saga states in MongoDB"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Broadway\\Saga\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "othillo",
+                    "email": "othillo@othillo.nl"
+                },
+                {
+                    "name": "Alexander",
+                    "email": "iam.asm89@gmail.com"
+                },
+                {
+                    "name": "Qandidate.com",
+                    "homepage": "http://labs.qandidate.com/"
+                },
+                {
+                    "name": "Willem-Jan",
+                    "email": "wjzijderveld@gmail.com"
+                },
+                {
+                    "name": "Emil",
+                    "email": "emil@broekmeulen.com"
+                },
+                {
+                    "name": "Fritsjan",
+                    "email": "fritsjan@qandidate.com"
+                }
+            ],
+            "description": "Proof-of-concept component providing saga functionality to broadway/broadway.",
+            "time": "2018-01-23T08:01:25+00:00"
         },
         {
             "name": "broadway/event-store-dbal",
