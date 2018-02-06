@@ -92,9 +92,9 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
         $this->getLanguage()->shouldReturn('HR');
     }
 
-    public function it_exposes_price(Money $price)
+    public function it_exposes_price()
     {
-        $this->getPrice()->shouldReturn($price);
+        $this->getPrice()->shouldBeLike(Money::HRK(12500));
     }
 
     public function it_exposes_created_at(DateTime $createdAt)
@@ -115,7 +115,6 @@ class WorkshopSessionCreatedSpec extends ObjectBehavior
         $endDate->format('c')->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
         $startTime->format('c')->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
         $endTime->format('c')->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
-        $price->serialize()->shouldBeCalled()->willReturn(['amount'=>'amount', 'currency'=>'code']);
         $createdAt->format('c')->shouldBeCalled()->willReturn('2018-01-01T00:01:00+00:00');
         $this->serialize()->shouldReturn(
             [
