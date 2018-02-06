@@ -1,0 +1,54 @@
+definition:
+  type: BroadwayCommand
+  instanceOf: WorkshopSession\Domain\Command\CreateWorkshopSession
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constants: {  }
+  constructor:
+    id:
+      instanceOf: WorkshopSession\Core\WorkshopSessionId
+      nullable: false
+      hasDefault: false
+      default: null
+    workshopId:
+      instanceOf: int
+      nullable: false
+      hasDefault: false
+      default: null
+    venueId:
+      instanceOf: string
+      nullable: false
+      hasDefault: false
+      default: null
+    startDate:
+      instanceOf: DateTime
+      nullable: false
+      hasDefault: false
+      default: null
+    endDate:
+      instanceOf: DateTime
+      nullable: false
+      hasDefault: false
+      default: null
+    startTime:
+      instanceOf: DateTime
+      nullable: false
+      hasDefault: false
+      default: null
+    endTime:
+      instanceOf: DateTime
+      nullable: false
+      hasDefault: false
+      default: null
+    language:
+      instanceOf: string
+      nullable: false
+      hasDefault: false
+      default: null
+    price:
+      instanceOf: Money\Money
+      nullable: false
+      hasDefault: false
+      default: null
+  methods: {  }

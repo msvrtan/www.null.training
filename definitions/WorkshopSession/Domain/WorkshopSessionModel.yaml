@@ -1,0 +1,25 @@
+definition:
+  type: BroadwayEventSourcedAggregateRoot
+  instanceOf: WorkshopSession\Domain\WorkshopSessionModel
+  parent: Broadway\EventSourcing\EventSourcedAggregateRoot
+  interfaces: {  }
+  traits: {  }
+  constants: {  }
+  properties:
+    id:
+      instanceOf: WorkshopSession\Core\WorkshopSessionId
+      nullable: false
+      hasDefault: false
+      default: null
+  methods:
+    getAggregateRootId:
+      type: chainedgetter
+      calls:
+        name: __toString
+        type: getter
+        property:
+          name: id
+          instanceOf: string
+          nullable: false
+          hasDefault: false
+          default: null

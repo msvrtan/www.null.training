@@ -1,9 +1,12 @@
 default:
     suites:
-        default:
+        workshop_session:
             contexts:
-                - FeatureContext:
+                - WorkshopSession\Behat\WorkshopSessionDomainContext:
                     kernel: '@kernel'
+                    commandBus: '@broadway.command_handling.command_bus'
+            filters:
+                tags: "@workshop_session"
 
     extensions:
         Behat\Symfony2Extension:

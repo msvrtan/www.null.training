@@ -1,0 +1,9 @@
+definition:
+  type: UuidV4Identifier
+  instanceOf: WorkshopSession\Core\WorkshopSessionId
+  parent: null
+  interfaces: {  }
+  traits: {  }
+  constants: {  }
+  properties: {  }
+  methods: {  }

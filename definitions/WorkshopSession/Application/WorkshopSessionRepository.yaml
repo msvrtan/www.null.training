@@ -1,0 +1,10 @@
+definition:
+  type: BroadwayEventSourcingRepository
+  instanceOf: WorkshopSession\Application\WorkshopSessionRepository
+  parent: Broadway\EventSourcing\EventSourcingRepository
+  interfaces: {  }
+  traits: {  }
+  constants: {  }
+  properties: {  }
+  methods: {  }
+  entity: WorkshopSession\Domain\WorkshopSessionModel

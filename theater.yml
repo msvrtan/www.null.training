@@ -1,0 +1,24 @@
+contexts:
+  WorkshopSession:
+    namespace: WorkshopSession
+    classes:
+      id: WorkshopSession\Core\WorkshopSessionId
+      model: WorkshopSession\Domain\WorkshopSessionModel
+      repository: WorkshopSession\Application\WorkshopSessionRepository
+      handler: WorkshopSession\Application\WorkshopSessionCommandHandler
+      entities: {  }
+      commands:
+        CreateWorkshopSession:
+          className: WorkshopSession\Domain\Command\CreateWorkshopSession
+          parameters:
+            id: WorkshopSession\Core\WorkshopSessionId
+            workshopId: int
+            venueId: string
+            startDate: DateTime
+            endDate: DateTime
+            startTime: DateTime
+            endTime: DateTime
+            language: string
+            price: Money\Money
+      events: {  }
+reads: {  }

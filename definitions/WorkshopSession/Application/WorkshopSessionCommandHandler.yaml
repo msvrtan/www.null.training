@@ -1,0 +1,17 @@
+definition:
+  type: BroadwayCommandHandler
+  instanceOf: WorkshopSession\Application\WorkshopSessionCommandHandler
+  parent: Broadway\CommandHandling\SimpleCommandHandler
+  interfaces: {  }
+  traits: {  }
+  constants: {  }
+  properties: {  }
+  methods: {  }
+  constructor:
+    repository:
+      instanceOf: WorkshopSession\Application\WorkshopSessionRepository
+      nullable: false
+      hasDefault: false
+      default: null
+  model: WorkshopSession\Domain\WorkshopSessionModel
+  modelId: WorkshopSession\Core\WorkshopSessionId
