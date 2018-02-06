@@ -47,6 +47,9 @@
     "broadway/uuid-generator": {
         "version": "0.4.0"
     },
+    "carbondate/carbon": {
+        "version": "1.23.1"
+    },
     "ciaranmcnulty/phpspec-typehintedmethods": {
         "version": "3.0.0"
     },
