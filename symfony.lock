@@ -155,9 +155,6 @@
     "friendsofsymfony/user-bundle": {
         "version": "2.1.x-dev"
     },
-    "gecko-packages/gecko-php-unit": {
-        "version": "v3.0"
-    },
     "hamcrest/hamcrest-php": {
         "version": "v2.0.0"
     },
@@ -490,6 +487,9 @@
             "version": "3.3",
             "ref": "1fc8201c507489d500c0538f8b40f6851463aa0d"
         }
+    },
+    "symfony/polyfill-ctype": {
+        "version": "v1.8.0"
     },
     "symfony/polyfill-intl-icu": {
         "version": "v1.6.0"
